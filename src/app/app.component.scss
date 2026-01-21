@@ -1,0 +1,218 @@
+html {
+  --ion-safe-area-top: 25px;
+  --ion-safe-area-left: 25px;
+}
+
+ion-modal {
+  --ion-safe-area-top: 0;
+}
+
+
+body, ion-app, .app-root {
+  padding-top: var(--ion-safe-area-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+ion-menu ion-content {
+  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+}
+
+ion-menu.md ion-content {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+ion-menu.md ion-list {
+  padding: 20px 0;
+}
+
+ion-menu.md ion-note {
+  margin-bottom: 30px;
+}
+
+ion-menu.md ion-list-header,
+ion-menu.md ion-note {
+  padding-left: 10px;
+}
+
+ion-menu.md ion-list#inbox-list {
+  border-bottom: 1px solid var(--ion-background-color-step-150, #d7d8da);
+}
+
+ion-menu.md ion-list#inbox-list ion-list-header {
+  font-size: 22px;
+  font-weight: 600;
+
+  min-height: 20px;
+}
+
+ion-menu.md ion-list#labels-list ion-list-header {
+  font-size: 16px;
+
+  margin-bottom: 18px;
+
+  color: #757575;
+
+  min-height: 26px;
+}
+
+ion-menu.md ion-item {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border-radius: 4px;
+}
+
+ion-menu.md ion-item.selected {
+  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+}
+
+ion-menu.md ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}
+
+ion-menu.md ion-item ion-icon {
+  color: #616e7e;
+}
+
+ion-menu.md ion-item ion-label {
+  font-weight: 500;
+}
+
+ion-menu.ios ion-content {
+  --padding-bottom: 20px;
+}
+
+ion-menu.ios ion-list {
+  padding: 20px 0 0 0;
+}
+
+ion-menu.ios ion-note {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+ion-menu.ios ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 50px;
+}
+
+ion-menu.ios ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}
+
+ion-menu.ios ion-item ion-icon {
+  font-size: 24px;
+  color: #73849a;
+}
+
+ion-menu.ios ion-list#labels-list ion-list-header {
+  margin-bottom: 8px;
+}
+
+ion-menu.ios ion-list-header,
+ion-menu.ios ion-note {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+ion-menu.ios ion-note {
+  margin-bottom: 8px;
+}
+
+ion-note {
+  display: inline-block;
+  font-size: 16px;
+
+  color: var(--ion-color-medium-shade);
+}
+
+ion-item.selected {
+  --color: var(--ion-color-primary);
+}
+
+ion-split-pane {
+  --side-width: 200px;
+  --side-min-width: 200px;
+  --side-max-width: 200px;
+}
+
+.menu-toggle {
+  --padding-start: 0;
+  --padding-end: 0;
+  margin-right: 8px;
+}
+
+@media (min-width: 992px) {
+  ion-menu {
+    --width: 200px;
+  }
+  
+  ion-menu ion-content {
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+  ion-menu.md ion-list {
+    padding: 10px 0;
+  }
+
+  ion-menu.md ion-list-header {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  ion-menu.md ion-item {
+    --padding-start: 6px;
+    --padding-end: 6px;
+  }
+
+  ion-menu.ios ion-item {
+    --padding-start: 8px;
+    --padding-end: 8px;
+  }
+}
+
+/* Modal Jira grande en web - compatibilidad total Ionic */
+.jira-modal-large .modal-wrapper,
+.jira-modal-large .ion-modal,
+.jira-modal-large .modal-shadow,
+.jira-modal-large .sheet-modal,
+.jira-modal-large .dialog-viewport,
+.jira-modal-large .sc-ion-modal-md,
+.jira-modal-large .sc-ion-modal-ios,
+.jira-modal-large::part(content) {
+  width: 90vw !important;
+  max-width: 1100px !important;
+  min-width: 700px !important;
+  height: 90vh !important;
+  max-height: 95vh !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .jira-modal-large .modal-wrapper,
+  .jira-modal-large .ion-modal,
+  .jira-modal-large .modal-shadow,
+  .jira-modal-large .sheet-modal,
+  .jira-modal-large .dialog-viewport,
+  .jira-modal-large .sc-ion-modal-md,
+  .jira-modal-large .sc-ion-modal-ios,
+  .jira-modal-large::part(content) {
+    width: 100vw !important;
+    min-width: unset !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+  }
+}

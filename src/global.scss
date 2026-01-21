@@ -1,0 +1,104 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+// @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+.principal-background {
+    background-image: radial-gradient(#eff8ff 2px, transparent 2px), radial-gradient(#eff8ff 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #ffffff;
+}
+
+.hoverable {
+    transition: all 0.2s ease;
+    &:hover {
+        transform: translateX(4px);
+        background-color: var(--ion-color-light-shade);
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* Modal Jira grande en web - compatibilidad total Ionic (global) */
+:root, body, .jira-modal-large, .jira-modal-large .modal-wrapper, .jira-modal-large .ion-modal, .jira-modal-large::part(content) {
+  --jira-modal-width: 90vw;
+  --jira-modal-max-width: 1100px;
+  --jira-modal-min-width: 700px;
+  --jira-modal-height: 90vh;
+  --jira-modal-max-height: 95vh;
+}
+
+.jira-modal-large .modal-wrapper,
+.jira-modal-large .ion-modal,
+.jira-modal-large .modal-shadow,
+.jira-modal-large .sheet-modal,
+.jira-modal-large .dialog-viewport,
+.jira-modal-large .sc-ion-modal-md,
+.jira-modal-large .sc-ion-modal-ios,
+.jira-modal-large::part(content) {
+  width: var(--jira-modal-width) !important;
+  max-width: var(--jira-modal-max-width) !important;
+  min-width: var(--jira-modal-min-width) !important;
+  height: var(--jira-modal-height) !important;
+  max-height: var(--jira-modal-max-height) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .jira-modal-large .modal-wrapper,
+  .jira-modal-large .ion-modal,
+  .jira-modal-large .modal-shadow,
+  .jira-modal-large .sheet-modal,
+  .jira-modal-large .dialog-viewport,
+  .jira-modal-large .sc-ion-modal-md,
+  .jira-modal-large .sc-ion-modal-ios,
+  .jira-modal-large::part(content) {
+    width: 100vw !important;
+    min-width: unset !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+  }
+}
