@@ -54,18 +54,6 @@ export interface Task {
                 </ion-item>
               </ion-col>
 
-              <!-- Estado -->
-              <ion-col size="12" size-md="4">
-                <ion-item>
-                  <ion-label position="stacked">Estado</ion-label>
-                  <ion-select [(ngModel)]="filters.completed" (ionChange)="applyFilters()">
-                    <ion-select-option value="">Todos</ion-select-option>
-                    <ion-select-option value="0">Pendiente</ion-select-option>
-                    <ion-select-option value="1">Finalizado</ion-select-option>
-                  </ion-select>
-                </ion-item>
-              </ion-col>
-
               <!-- Buscar -->
               <ion-col size="12" size-md="4">
                 <ion-item>
